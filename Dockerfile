@@ -3,13 +3,11 @@
 FROM python:3.7-slim
 
 # Copy local code to the container image.
-EXPOSE 80
-ENV APP_HOME /app
-WORKDIR $APP_HOME
+WORKDIR /app
 COPY . .
 
 # Install production dependencies.
-RUN pip install functions-framework
+RUN pip install Flask
 
 # Run the web service on container startup.
-CMD exec functions-framework --target=index
+CMD ["python3", "main.py"]
