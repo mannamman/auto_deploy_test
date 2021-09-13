@@ -3,6 +3,7 @@
 FROM python:3.7-slim
 
 # Copy local code to the container image.
+EXPOSE 80
 WORKDIR /app
 COPY . .
 
