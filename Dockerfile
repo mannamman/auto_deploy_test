@@ -9,7 +9,5 @@ COPY . .
 # Install production dependencies.
 RUN pip install Flask
 
-COPS model.pt /app
-
 # Run the web service on container startup.
 CMD ["python3", "main.py"]
