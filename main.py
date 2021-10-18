@@ -10,9 +10,9 @@ def index():
         env2 = os.environ["env2"]
     except KeyError:
         return(str(os.environ), 200) 
-    env1_type = type(env1)
-    env2_type = type(env2)
-    return(f"{env1} {env1_type}, {env2} {env2_type}", 200) 
+    env1_type = str(type(env1))
+    env2_type = str(type(env2))
+    return(f"env1 : {env1} env1_type : {env1_type}, env2 : {env2} env2_type : {env2_type}", 200) 
 
 
 if(__name__=='__main__'):
