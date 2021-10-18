@@ -8,6 +8,7 @@ COPY . .
 
 # Install production dependencies.
 RUN pip install Flask
+EXPOSE 8080
 
 # Run the web service on container startup.
 CMD ["python3", "main.py"]
